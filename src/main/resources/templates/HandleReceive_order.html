@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>处理领料单</title>
+</head>
+<body>
+<div class="container">
+		<div class="col-md-6 col-offset-3">
+			<h1>领料单列表</h1>
+			<table border="1">
+			<tr>
+			<th>序号</th>
+			<th>领料单</th>
+			<th>申请时间</th>
+			</tr>
+			<tr th:each="handle:${HadleReceiveorder}">
+			<td th:text="${handleStat.index}">编号</td>
+			<td th:text="${hamdle.Rmessage}">领料单信息</td>
+			<td th:text="${hamdle.postedTime}">发送时间</td>
+			</tr>
+			</table>
+			<a th:href="@{'/hquer/'+${Administrators}}">返回</a>
+		</div>
+	</div>
+</body>
+</html>

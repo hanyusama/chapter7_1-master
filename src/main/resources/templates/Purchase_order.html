@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>采购单</title>
+</head>
+<body>
+<div class="container">
+		<div class="col-md-6 col-offset-3">
+			<h1>采购</h1>
+			<form class="form-horizontal" role="form" action="/hquer/register"
+				th:action="@{/hquer/register}" th:object="${hquer}" method="post"
+				th:method="post" enctype="multipart/form-data">
+				<div class="form-group row">
+					<label for="goodsID" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('goodsID')}?'badge badge-danger'">商品ID：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="goodsID"
+							placeholder="请输入商品ID"  th:field="*{goodsID}"
+							th:classappend="${#fields.hasErrors('goodsID')}?'text-danger'">
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="goodsName" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('goodsName')}?'badge badge-danger'">商品名称：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="goodsName"
+							placeholder="请输入商品名称"  th:field="*{goodsName}"
+							th:classappend="${#fields.hasErrors('goodsName')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="goodsCount" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('goodsCount')}?'badge badge-danger'">商品数量：</label>
+					<div class="col-md-9">
+						<input type="goodsCount" class="form-control" id="goodsCount"
+							placeholder="请输入商品数量"  th:field="*{goodsCount}"
+							th:classappend="${#fields.hasErrors('goodsCount')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="goodsUnit" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('goodsUnit')}?'badge badge-danger'">商品单位：</label>
+					<div class="col-md-9">
+						<input type="goodsUnit" class="form-control" id="goodsUnit"
+							placeholder="请输入商品单位"  th:field="*{goodsUnit}"
+							th:classappend="${#fields.hasErrors('goodsUnit')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="goodsType" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('goodsType')}?'badge badge-danger'">商品型号：</label>
+					<div class="col-md-9">
+						<input type="goodsType" class="form-control" id="goodsType"
+							placeholder="请输入商品型号"  th:field="*{goodsType}"
+							th:classappend="${#fields.hasErrors('goodsType')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<input class="btn btn-block" type="submit" value="提交" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
